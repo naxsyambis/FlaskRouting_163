@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Menentukan encoding karakter halaman ini menjadi UTF-8, mendukung banyak karakter internasional -->
+    <meta charset="UTF-8">
+    
+    <!-- Mengatur halaman agar responsif di perangkat mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Judul halaman yang akan ditampilkan di tab browser -->
+    <title>Login</title>
+
+    <!-- Menghubungkan file CSS yang berada di folder 'static', menggunakan Flask url_for untuk penanganan file statis -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Kontainer utama untuk tampilan login -->
+    <div class="login-container">
+        <!-- Bagian ini hanya akan tampil jika variabel 'name' ada, menandakan login berhasil -->
+        {% if name %}
+            <!-- Menampilkan pesan selamat datang jika pengguna berhasil login -->
+            <h1>Welcome, {{ name }}!</h1>
+            <p>Your login is successful.</p>
+        {% else %}
+            <!-- Jika variabel 'name' tidak ada, tampilkan form login -->
+            <h1>Login</h1>
+            <form action="{{ url_for('login') }}" method="post">
+                <!-- Form group untuk memasukkan nama pengguna -->
+                <div class="form-group">
+                    <label for="username">User name</label>
+                    <!-- Input field untuk nama pengguna -->
+                    <input type="text" id="username" name="nm" required>
+                </div>
+                <!-- Tombol submit untuk mengirim form -->
+                <button type="submit">Login</button>
+            </form>
+        {% endif %}
+    </div>
+</body>
+</html>

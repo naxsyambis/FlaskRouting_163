@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Menentukan karakter encoding untuk halaman web ini -->
+    <meta charset="UTF-8">
+    
+    <!-- Mengatur halaman agar responsif di perangkat mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Judul halaman yang akan tampil di tab browser -->
+    <title>kelas D</title>
+
+    <!-- Menghubungkan file CSS yang terletak di folder 'static', menggunakan fungsi Flask url_for -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Bagian konten utama halaman -->
+    <div class="home-container">
+        <!-- Judul halaman utama yang menyambut pengunjung -->
+        <h1>selamat datang di kelas D</h1>
+        
+        <!-- Deskripsi yang mengundang pengunjung untuk menjelajahi lebih lanjut -->
+        <p>Explore the infinite universe of possibilities.</p>
+
+        <!-- Tombol yang mengarahkan pengunjung ke halaman login, menggunakan Flask url_for untuk rute 'login' -->
+        <a href="{{ url_for('login') }}">
+            <button>Mulai dari sini</button>
+        </a>
+    </div>
+</body>
+</html>

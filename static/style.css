@@ -1,0 +1,146 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif; /* Menggunakan font Poppins dengan fallback Arial dan sans-serif */
+    margin: 0; /* Menghilangkan margin default pada body */
+    padding: 0; /* Menghilangkan padding default pada body */
+    height: 100vh; /* Menetapkan tinggi halaman menjadi 100% dari viewport */
+    display: flex; /* Menjadikan body menggunakan layout flexbox */
+    justify-content: center; /* Menyusun elemen secara horizontal di tengah */
+    align-items: center; /* Menyusun elemen secara vertikal di tengah */
+    background: linear-gradient(135deg, #000000, #3b4e69); /* Latar belakang dengan gradien gelap ke biru */
+    color: #FFF; /* Warna teks putih */
+    background-size: cover; /* Mengatur ukuran latar belakang agar menutupi seluruh elemen */
+    background-position: center; /* Menempatkan latar belakang di tengah */
+    animation: galaxyAnimation 15s infinite linear; /* Animasi bergerak pada latar belakang */
+}
+
+/* Animasi galaksi bergerak */
+@keyframes galaxyAnimation {
+    0% {
+        background-position: 0 0; /* Posisi awal latar belakang */
+    }
+    100% {
+        background-position: 100% 100%; /* Posisi akhir latar belakang */
+    }
+}
+
+/* Kontainer Halaman Utama */
+.home-container {
+    text-align: center; /* Menyusun teks di tengah */
+    color: #FFF; /* Warna teks putih */
+    background-color: rgba(58, 16, 66, 0.7); /* Latar belakang hitam transparan */
+    padding: 30px; /* Memberikan ruang di dalam elemen */
+    border-radius: 10px; /* Menambahkan sudut melengkung pada kontainer */
+    box-shadow: 0 10px 30px rgba(219, 213, 213, 0.6); /* Menambahkan bayangan untuk efek kedalaman */
+    animation: fadeIn 2s ease-in-out; /* Menambahkan animasi fade-in pada kontainer */
+}
+
+h1 {
+    font-size: 3rem; 
+    margin-bottom: 20px; 
+    text-transform: uppercase; 
+    font-weight: 800;
+    color: #010f17; 
+}
+
+p {
+    font-size: 1.5rem; /* Ukuran font paragraf */
+    margin-top: 10px; /* Memberikan jarak di atas paragraf */
+    color: #042534; /* Warna teks biru muda */
+}
+
+/* Tombol */
+button {
+    margin-top: 30px; /* Memberikan jarak di atas tombol */
+    padding: 18px 40px; /* Memberikan ruang di dalam tombol */
+    background: #043d58; /* Latar belakang tombol berwarna biru terang */
+    color: white; /* Warna teks tombol putih */
+    font-size: 1.1rem; /* Ukuran font tombol */
+    border: none; /* Menghilangkan border pada tombol */
+    border-radius: 8px; /* Memberikan sudut melengkung pada tombol */
+    cursor: pointer; /* Menampilkan kursor pointer saat mouse hover di tombol */
+    transition: transform 0.2s, box-shadow 0.3s; /* Efek transisi pada transformasi dan bayangan */
+    box-shadow: 0 0 15px rgba(0, 176, 255, 0.3), 0 0 30px rgba(0, 176, 255, 0.5); /* Menambahkan bayangan pada tombol */
+}
+
+button:hover {
+    transform: translateY(-5px); /* Menggeser tombol ke atas sedikit saat hover */
+    box-shadow: 0 0 20px rgba(0, 176, 255, 0.5), 0 0 40px rgba(0, 176, 255, 0.7); /* Menambahkan bayangan yang lebih besar saat hover */
+}
+
+button:active {
+    transform: translateY(0); /* Mengembalikan posisi tombol saat ditekan */
+    box-shadow: none; /* Menghilangkan bayangan saat tombol ditekan */
+}
+
+/* Kontainer Form Login */
+.login-container {
+    background: rgba(0, 0, 0, 0.7); /* Latar belakang hitam transparan */
+    padding: 40px; /* Memberikan ruang di dalam form */
+    border-radius: 16px; /* Menambahkan sudut melengkung pada form */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* Menambahkan bayangan pada form */
+    width: 100%; /* Mengatur lebar form menjadi 100% */
+    max-width: 420px; /* Batas maksimal lebar form */
+    text-align: center; /* Menyusun teks di tengah */
+    position: relative; /* Posisi relatif untuk elemen di dalam form */
+}
+
+h1 {
+    font-size: 3rem; /* Ukuran font judul dalam form */
+    margin-bottom: 30px; /* Memberikan jarak di bawah judul */
+    color: #d8eaf4; /* Warna teks biru terang */
+}
+
+input[type="text"] {
+    padding: 14px; /* Memberikan ruang di dalam input */
+    margin-top: 10px; /* Memberikan jarak di atas input */
+    border: 1px solid #00B0FF; /* Border input berwarna biru terang */
+    border-radius: 8px; /* Sudut melengkung pada input */
+    width: calc(100% - 28px); /* Lebar input 100% dikurangi padding */
+    background: #263238; /* Latar belakang input berwarna biru gelap */
+    color: #FFF; /* Warna teks input putih */
+    font-size: 1.1rem; /* Ukuran font input */
+    box-shadow: 0 0 5px rgba(0, 176, 255, 0.2); /* Bayangan input */
+    transition: border-color 0.3s; /* Transisi warna border saat fokus */
+}
+
+input[type="text"]:focus {
+    border-color: #99ff00; /* Border berubah menjadi biru terang saat fokus */
+    outline: none; /* Menghilangkan outline default */
+    background-color: #1C262B; /* Latar belakang input lebih gelap saat fokus */
+}
+
+button {
+    margin-top: 30px; /* Jarak atas tombol */
+    padding: 18px 40px; /* Ruang dalam tombol */
+    background: #d9ff00; /* Latar belakang tombol berwarna biru terang */
+    color: white; /* Warna teks tombol putih */
+    font-size: 1.1rem; /* Ukuran font tombol */
+    border: none; /* Menghilangkan border tombol */
+    border-radius: 8px; /* Sudut melengkung pada tombol */
+    cursor: pointer; /* Menampilkan kursor pointer saat mouse hover */
+    transition: transform 0.2s, box-shadow 0.3s; /* Efek transisi pada tombol */
+    box-shadow: 0 0 15px rgba(0, 176, 255, 0.3), 0 0 30px rgba(0, 176, 255, 0.5); /* Menambahkan bayangan pada tombol */
+}
+
+button:hover {
+    transform: translateY(-5px); /* Menggeser tombol ke atas sedikit saat hover */
+    box-shadow: 0 0 20px rgba(0, 176, 255, 0.5), 0 0 40px rgba(0, 176, 255, 0.7); /* Menambahkan bayangan lebih besar saat hover */
+}
+
+button:active {
+    transform: translateY(0); /* Mengembalikan posisi tombol saat ditekan */
+    box-shadow: none; /* Menghilangkan bayangan saat tombol ditekan */
+}
+
+/* Animasi Fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Mulai dengan transparansi 0 */
+        transform: translateY(-20px); /* Mulai dengan posisi lebih tinggi */
+    }
+    to {
+        opacity: 1; /* Akhirnya transparansi menjadi 1 */
+        transform: translateY(0); /* Posisi kembali normal */
+    }
+}
